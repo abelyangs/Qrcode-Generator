@@ -18,7 +18,7 @@ public class CreateQRCode {
 		int width = 300;
 		int height = 300;
 		String format = "png";
-		String content = "没干嘛，在练习生成二维码";
+		String content = "https://www.github.com/yangshuai5";
 		
 		//定义二维码参数
 		HashMap hints = new HashMap();
@@ -31,7 +31,7 @@ public class CreateQRCode {
 		try {
 			BitMatrix bitMatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height,hints);
 			
-			Path QRPath = new File("E:/qrcode-test/QRCode-1.png").toPath();
+			Path QRPath = new File("C:/QRCode-1.png").toPath();
 			
 		    MatrixToImageWriter.writeToPath(bitMatrix, format, QRPath);
 		} catch (Exception e) {
